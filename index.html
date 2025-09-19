@@ -1,93 +1,206 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mega ZC World - Películas, Juegos y Aplicaciones</title>
-    <!-- Enlace a la hoja de estilos externa -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Enlace a Google Fonts para la fuente 'Poppins' -->
+    <title>Mega ZC World - Tu Universo de Entretenimiento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="bg-gray-900 text-white">
 
-    <!-- Encabezado Principal -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">🌐 Mega ZC World</h1>
-            <p class="hero-subtitle">Tu portal de Películas, Juegos y Aplicaciones</p>
+    <!-- Header / Navegación -->
+    <header class="bg-gray-900/80 backdrop-blur-sm sticky top-0 z-50 shadow-lg shadow-indigo-500/10">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider">
+                Mega <span class="text-indigo-400">ZC</span> World
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#peliculas" class="hover:text-indigo-400 transition-colors duration-300">Películas</a>
+                <a href="#juegos" class="hover:text-indigo-400 transition-colors duration-300">Juegos</a>
+                <a href="#apps" class="hover:text-indigo-400 transition-colors duration-300">Aplicaciones</a>
+            </div>
+            <a href="#peliculas" class="hidden md:block bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-5 rounded-lg transition-transform duration-300 hover:scale-105">
+                Explorar Ahora
+            </a>
+            <button id="mobile-menu-button" class="md:hidden text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Menú Móvil -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4 space-y-2">
+            <a href="#peliculas" class="block hover:text-indigo-400 transition-colors duration-300">Películas</a>
+            <a href="#juegos" class="block hover:text-indigo-400 transition-colors duration-300">Juegos</a>
+            <a href="#apps" class="block hover:text-indigo-400 transition-colors duration-300">Aplicaciones</a>
         </div>
     </header>
 
     <main>
-        <!-- Sección de Categorías -->
-        <section class="categories-section">
-            <h2 class="section-title">Explora Nuestras Categorías</h2>
-            <div class="category-container">
-                
-                <!-- Tarjeta de Películas -->
-                <div class="category-card">
-                    <img src="https://placehold.co/600x400/007bff/white?text=Películas" alt="Imagen de carrete de película" class="card-image">
-                    <div class="card-content">
-                        <h3>🎬 Películas</h3>
-                        <p>Descubre los últimos estrenos, reseñas y recomendaciones del séptimo arte.</p>
-                        <a href="#" class="card-button" style="--btn-color: #007bff;">Ver más</a>
-                    </div>
-                </div>
-
-                <!-- Tarjeta de Juegos -->
-                <div class="category-card">
-                    <img src="https://placehold.co/600x400/28a745/white?text=Juegos" alt="Imagen de un control de videojuegos" class="card-image">
-                    <div class="card-content">
-                        <h3>🎮 Juegos</h3>
-                        <p>Las noticias más recientes, análisis a fondo y los mejores títulos para ti.</p>
-                        <a href="#" class="card-button" style="--btn-color: #28a745;">Ver más</a>
-                    </div>
-                </div>
-
-                <!-- Tarjeta de Aplicaciones -->
-                <div class="category-card">
-                    <img src="https://placehold.co/600x400/ff6600/white?text=Apps" alt="Imagen de un teléfono móvil" class="card-image">
-                    <div class="card-content">
-                        <h3>📱 Aplicaciones</h3>
-                        <p>Las mejores y más útiles aplicaciones recomendadas para tu día a día.</p>
-                        <a href="#" class="card-button" style="--btn-color: #ff6600;">Ver más</a>
-                    </div>
-                </div>
-
+        <!-- Sección de Héroe -->
+        <section class="relative h-[60vh] md:h-[80vh] flex items-center justify-center text-center overflow-hidden">
+            <div class="absolute inset-0 gradient-bg opacity-90 z-10"></div>
+            <div class="absolute inset-0 bg-no-repeat bg-cover bg-center z-0" style="background-image: url('https://placehold.co/1920x1080/000000/FFFFFF?text=Background'); opacity: 0.2;"></div>
+            <div class="relative z-20 container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4 animate-fade-in-down">Tu Universo de Entretenimiento Digital</h1>
+                <p class="text-lg md:text-xl max-w-3xl mx-auto text-indigo-100 mb-8 animate-fade-in-up">
+                    Descubre las últimas películas, juega los títulos más emocionantes y explora aplicaciones innovadoras, todo en un solo lugar.
+                </p>
+                <a href="#peliculas" class="bg-white text-indigo-700 font-bold py-3 px-8 rounded-full text-lg hover:bg-indigo-100 transition-transform duration-300 hover:scale-110 inline-block animate-bounce-slow">
+                    Comienza a Explorar
+                </a>
             </div>
         </section>
 
-        <!-- Sección de Últimas Noticias -->
-        <section class="news-section">
-            <h2 class="section-title">Últimas Noticias</h2>
-            <div class="news-container">
-                <article class="news-item">
-                    <h4>Análisis del Juego del Año</h4>
-                    <p>Te contamos por qué este título se ha llevado todos los premios...</p>
-                    <span>Publicado hace 2 días</span>
-                </article>
-                <article class="news-item">
-                    <h4>La App que revoluciona la productividad</h4>
-                    <p>Descubre cómo esta herramienta puede cambiar tu forma de trabajar...</p>
-                    <span>Publicado hace 5 días</span>
-                </article>
-                <article class="news-item">
-                    <h4>Estrenos de Cine para este fin de semana</h4>
-                    <p>Una selección de las mejores películas que llegan a la cartelera...</p>
-                    <span>Publicado hace 1 semana</span>
-                </article>
+        <!-- Sección de Películas -->
+        <section id="peliculas" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Películas <span class="text-indigo-400">Destacadas</span></h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tarjeta de Película 1 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x750/3949ab/FFFFFF?text=Aventura+Espacial" alt="Póster de Aventura Espacial" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Aventura Espacial</h3>
+                            <p class="text-gray-400 text-sm">Ciencia Ficción / Acción</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Película 2 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x750/1a237e/FFFFFF?text=Misterio+en+la+Ciudad" alt="Póster de Misterio en la Ciudad" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Misterio en la Ciudad</h3>
+                            <p class="text-gray-400 text-sm">Suspenso / Drama</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Película 3 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x750/5c6bc0/FFFFFF?text=Comedia+Familiar" alt="Póster de Comedia Familiar" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Comedia Familiar</h3>
+                            <p class="text-gray-400 text-sm">Comedia / Familiar</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Película 4 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x750/7e57c2/FFFFFF?text=Héroes+Reunidos" alt="Póster de Héroes Reunidos" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Héroes Reunidos</h3>
+                            <p class="text-gray-400 text-sm">Acción / Superhéroes</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- Sección de Juegos -->
+        <section id="juegos" class="py-20 bg-gray-800/50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Juegos <span class="text-indigo-400">Populares</span></h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Tarjeta de Juego 1 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x500/d32f2f/FFFFFF?text=Guerrero+Legendario" alt="Portada de Guerrero Legendario" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Guerrero Legendario</h3>
+                            <p class="text-gray-400 text-sm">RPG / Aventura</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Juego 2 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x500/00796b/FFFFFF?text=Carreras+Futuristas" alt="Portada de Carreras Futuristas" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Carreras Futuristas</h3>
+                            <p class="text-gray-400 text-sm">Carreras / Sci-Fi</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Juego 3 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x500/fbc02d/000000?text=Puzzle+Mágico" alt="Portada de Puzzle Mágico" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Puzzle Mágico</h3>
+                            <p class="text-gray-400 text-sm">Puzzle / Casual</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de Juego 4 -->
+                    <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg card-hover-effect">
+                        <img src="https://placehold.co/500x500/388e3c/FFFFFF?text=Estrategia+Global" alt="Portada de Estrategia Global" class="w-full h-auto object-cover">
+                        <div class="p-6">
+                            <h3 class="font-bold text-xl mb-2">Estrategia Global</h3>
+                            <p class="text-gray-400 text-sm">Estrategia / Simulación</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Aplicaciones -->
+        <section id="apps" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Aplicaciones <span class="text-indigo-400">Esenciales</span></h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tarjeta de App 1 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex items-center space-x-6 card-hover-effect">
+                        <div class="flex-shrink-0 bg-indigo-500 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Organizador Pro</h3>
+                            <p class="text-gray-400 mt-1">Gestiona tus tareas y proyectos de forma eficiente.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de App 2 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex items-center space-x-6 card-hover-effect">
+                        <div class="flex-shrink-0 bg-pink-500 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">Editor de Fotos IA</h3>
+                            <p class="text-gray-400 mt-1">Mejora tus fotos con inteligencia artificial.</p>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de App 3 -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex items-center space-x-6 card-hover-effect">
+                        <div class="flex-shrink-0 bg-green-500 p-4 rounded-lg">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">App de Fitness</h3>
+                            <p class="text-gray-400 mt-1">Alcanza tus metas de salud y bienestar.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Pie de Página -->
-    <footer class="footer">
-        <p>&copy; 2025 Mega ZC World. Todos los derechos reservados.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700/50">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            <p>&copy; 2025 Mega ZC World. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Creado con pasión para el entretenimiento digital.</p>
+        </div>
     </footer>
+
+    <script>
+        // Script para menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cerrar menú móvil al hacer clic en un enlace
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
 
 </body>
 </html>
